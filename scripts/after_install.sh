@@ -30,7 +30,8 @@ cd /var/www/$FOLDER_NAME &&
 #sudo composer install >> $LOG_FILE &&
 #sudo rm -rf vendor/ >> $LOG_FILE &&
 #sudo rm -rf composer.lock >> $LOG_FILE &&
-sudo composer install --ignore-platform-reqs >> $LOG_FILE &&
+#sudo composer install --ignore-platform-reqs >> $LOG_FILE &&
+sudo /usr/bin/php73 /usr/bin/composer install --ignore-platform-reqs >> $LOG_FILE &&
 sudo chmod -R 777 bootstrap >> $LOG_FILE &&
 sudo chmod -R 777 storage >> $LOG_FILE &&
 sudo chmod -R 777 vendor >> $LOG_FILE &&
